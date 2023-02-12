@@ -1,0 +1,45 @@
+#quotebox {
+  border: none;
+  background-color: transparent;
+  border-bottom: solid white 1px;
+  width: 50%;
+  color: white;
+  outline: none;
+  text-align: center;
+}
+
+.quotediv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#quotesec2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#quote {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#refreshbox {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+#refreshBtn {
+  color: white;
+}
+
+#quotelabel {
+  font-family: verdana;
+  font-size: 15px;
+}/*# sourceMappingURL=quotes.css.map */

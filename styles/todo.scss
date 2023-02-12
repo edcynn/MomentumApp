@@ -1,0 +1,38 @@
+#todosec {
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40%;
+    padding-right: 30px;
+  }
+  
+  .todobox-style {
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 10px;
+    height: 135px;
+    max-height:  135px;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #todo-field {
+    position: sticky;
+  }
+
+  #todolabel {
+    font-family: verdana;
+    font-size: 15px;
+  }
+
+  .todoul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #remove {
+    color: white
+  }

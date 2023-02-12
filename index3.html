@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href= "styles/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="bgjs.js" defer></script>
+</head>
+
+<body>
+    
+    <section id="mainsec">
+        <div id="time-division" onmouseover="showClock()" onmouseout="hideClock()">
+            <div id="time-format-box">
+                <label id="time-format" for="timeswitch"><i id="clock-icon" class="fa fa-clock-o fa-2x"></i></label>
+                <input type="checkbox" id="timeswitch">
+            </div>
+            <div id="timebox"></div>
+        </div>
+
+        <div id="greetingbox"></div>
+        <div id="questionbox"></div>
+        <input type="text" name="answer-field" id="answer-field">
+        <div id="focusbox" onmouseover="showBtn()" onmouseout="hideBtn()">
+            <div id="focusdiv"></div>
+            <div id=buttonbox><button id="remove">X</button></div>
+        </div>
+    </section>
+
+    <div class="align">
+
+        <section id="settings-sec">
+            <div>
+                <div class="settingsbox">
+
+                    <div id ="settings-title">Display Settings</div>
+                
+                    <div>
+                        <label class="switch">
+                            <span class="feature">Time</span>
+                            <input type="checkbox" id="hide-time">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="switch">
+                            <span class="feature">Greeting</span>
+                            <input type="checkbox" id="hide-greeting">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                </div>
+            </div>
+            <label for="settings-toggle"><i id="settings-icon" class="fa fa-cog fa-1x"></i></label>
+            <input type="checkbox" id="settings-toggle">
+        </section>
+
+        <section id="quotesec2">
+            <div id="quote"></div>
+            <div id="refreshbox"><i id="refreshBtn" class="fa fa-refresh fa-1x"></i></div>
+            <div class="quotediv">
+                <input type="textbox" id="quotebox"> 
+                <label for="quoteBtn" id="quotelabel">Add quote</label>
+                <input type="checkbox" id="quoteBtn">
+            </div>
+        </section>
+
+        <section id="todosec">
+            <div class="todobox">
+                <div id="todotitle">Nothing to do!</div>
+                <input type="textbox" id="todo-field" placeholder="New to do">
+                <ul class="todoul">
+                </ul>
+            </div>
+            <div class="buttonbox">
+                <label for="toggle" id="todolabel">To Do</label>
+                <input type="checkbox" id="toggle">
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

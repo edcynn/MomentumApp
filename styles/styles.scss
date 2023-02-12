@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+body {
+  background-image: url('./assets/lol.jpg');
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  height: 87vh;
+  background-repeat: repeat;
+}
+
+.align {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  margin-top: 8%;
+  height: 150px;
+}
+
+#settings-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.settingsbox {
+  height: 130px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 15px;
+  padding: 10px;
+}
+
+#settings-title {
+  font-size: 20px;
+  height: 25px;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: solid white 1px;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#settings-icon {
+  color: white;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+#timeswitch {
+  display: none;
+}
+
+#time-division {
+  width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#time-format-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 35px;
+  margin-right: 10px;
+}
+
+#clock-icon {
+  color: white;
+}
+
+#timebox {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.feature {
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+#settings-toggle {
+ display: none;
+}
+
+.settingsbox div label {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.switch {
+  position: relative;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle .feature {
+  color: white;
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.slider {
+  position: relative;
+  border-radius: 30%;
+  display: block;
+  cursor: pointer;
+  background-color: rgb(177, 171, 171);
+  transition: 0.4s;
+  width: 42px;
+  height: 22px;
+}
+
+.slider:before {
+  content: '';
+  position: absolute;
+  border-radius: 40%;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  transition: 0.4s;
+  top: 5px;
+  left: 5px;
+}
+
+#hide-time:checked + .slider:before {
+  transform: translateX(20px)
+}
+
+#hide-time:checked + .slider {
+  background-color: green;
+}
+
+#hide-greeting:checked + .slider:before {
+  transform: translateX(20px)
+}
+
+#hide-greeting:checked + .slider {
+  background-color: green;
+}
+
+#hide-focus:checked + .slider:before {
+  transform: translateX(20px)
+}
+
+#hide-focus:checked + .slider {
+  background-color: green;
+}
+
+
+@import "./classes.scss";
+@import "./focus.scss";
+@import "./quotes.scss";
+@import "./todo.scss";
+

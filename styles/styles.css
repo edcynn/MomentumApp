@@ -1,0 +1,384 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./assets/lol.jpg");
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  height: 87vh;
+  background-repeat: repeat;
+}
+
+.align {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  margin-top: 8%;
+  height: 150px;
+}
+
+#settings-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.settingsbox {
+  height: 130px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 15px;
+  padding: 10px;
+}
+
+#settings-title {
+  font-size: 20px;
+  height: 25px;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: solid white 1px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#settings-icon {
+  color: white;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+#timeswitch {
+  display: none;
+}
+
+#time-division {
+  width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#time-format-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 35px;
+  margin-right: 10px;
+}
+
+#clock-icon {
+  color: white;
+}
+
+#timebox {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.feature {
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+
+#settings-toggle {
+  display: none;
+}
+
+.settingsbox div label {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.switch {
+  position: relative;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle .feature {
+  color: white;
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.slider {
+  position: relative;
+  border-radius: 30%;
+  display: block;
+  cursor: pointer;
+  background-color: rgb(177, 171, 171);
+  transition: 0.4s;
+  width: 42px;
+  height: 22px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  border-radius: 40%;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  transition: 0.4s;
+  top: 5px;
+  left: 5px;
+}
+
+#hide-time:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+#hide-time:checked + .slider {
+  background-color: green;
+}
+
+#hide-greeting:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+#hide-greeting:checked + .slider {
+  background-color: green;
+}
+
+#hide-focus:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+#hide-focus:checked + .slider {
+  background-color: green;
+}
+
+.morning-body {
+  background-image: url("./assets/lo.jfif");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: top;
+}
+
+.afternoon-body {
+  background-image: url(./assets/bg3.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: top;
+}
+
+.evening-body {
+  background-image: url(./assets/wu.gif);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: bottom;
+}
+
+.time-style {
+  font-size: 65px;
+  font-family: Verdana;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 25%;
+  margin-bottom: 20px;
+}
+
+.greeting-style {
+  font-size: 50px;
+  font-family: Verdana;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgba(241, 237, 237, 0.9);
+}
+
+.question-style {
+  font-size: 50px;
+  font-family: Verdana;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.namefield {
+  display: block;
+  margin: auto;
+  width: 52%;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid white 3px;
+  outline: none;
+  color: white;
+  text-align: center;
+  font-family: verdana;
+  font-size: 35px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+}
+
+.newfield {
+  margin: 20px auto;
+  width: 40%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: verdana;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  border-bottom: solid white 3px;
+  text-overflow: ellipsis;
+}
+
+.placeholderstyle::-webkit-input-placeholder {
+  color: rgba(241, 237, 237, 0.5);
+}
+
+.todofield {
+  display: none;
+  background-color: transparent;
+  color: rgba(241, 237, 237, 0.8);
+  margin-bottom: 4px;
+}
+
+.todolabel {
+  display: none;
+  color: white;
+  margin-top: 20px;
+  text-align: right;
+  margin-right: 25px;
+}
+
+.quote {
+  display: none;
+  height: 35px;
+  font-family: Verdana;
+  font-size: 15px;
+  color: white;
+  padding-top: 35%;
+}
+
+.new-todo {
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-bottom: 4px;
+  color: white;
+  padding-left: 5px;
+}
+
+#focusbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#remove {
+  display: flex;
+  align-items: top;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30PX;
+  border-color: white;
+  color: white;
+  margin-left: 10px;
+}
+
+#quotebox {
+  border: none;
+  background-color: transparent;
+  border-bottom: solid white 1px;
+  width: 50%;
+  color: white;
+  outline: none;
+  text-align: center;
+}
+
+.quotediv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#quotesec2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#quote {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#refreshbox {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+#refreshBtn {
+  color: white;
+}
+
+#quotelabel {
+  font-family: verdana;
+  font-size: 15px;
+}
+
+#todosec {
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40%;
+  padding-right: 30px;
+}
+
+.todobox-style {
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 10px;
+  height: 135px;
+  max-height: 135px;
+  overflow-y: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#todo-field {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+#todolabel {
+  font-family: verdana;
+  font-size: 15px;
+}
+
+.todoul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#remove {
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
