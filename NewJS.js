@@ -1,7 +1,7 @@
-//EXPLOREEEEEEEEEEEEEEEEtodolabe
+
 const today = new Date();
-let hour = today.getHours();
-const minute = today.getMinutes();
+var options = {hour: '2-digit', minute: '2-digit'};
+var time = today.toLocaleString('en-US', options);
 
 const main = document.querySelector('#mainsec')
 const divTime = document.querySelector('#timebox')
@@ -60,6 +60,7 @@ todoField.classList.add('todofield')
 toDoLabel.classList.add('todolabel')
 todoBox.classList.add('todobox-style')
 
+
 clockIcon.style.display = 'none'
 timeFormat.style.display ='none'
 divTime.style.visibility = 'hidden'
@@ -84,8 +85,6 @@ todotitle.style.textAlign = 'left'
 
 toggle.style.display = 'none'
 listUL.style.display = 'none'
-
-
 
 answerField.addEventListener('keypress', function (a) {
 
@@ -120,23 +119,22 @@ answerField.addEventListener('keypress', function (a) {
         quoteBtn.style.display = 'none'
         refreshBtn.style.visibility = 'visible'
 
-        if (hour < 12) {
-            if (hour <10) {
-            divTime.textContent = '0' + hour + ':' + minute + ' am'
+        divTime.textContent = time;
+
+        if (options.hour < 12) {
+            if (options.hour <10) {
             divGreeting.textContent= 'Good morning, '+ answer + '.'
             }
-            else divTime.textContent = hour + ':' + minute + ' am'
+            else 
             divGreeting.textContent= 'Good morning, '+ answer + '.'
             body.classList.add('morning-body')
 
-          } else if (hour > 11 && hour < 18) {
+          } else if (options.hour > 11 && options.hour < 18) {
           
-            divTime.textContent = hour + ':' + minute + ' pm'
             divGreeting.textContent='Good afternoon, '+ answer + '.'
             body.classList.add('afternoon-body')
             
           } else {
-            divTime.textContent = hour + ':' + minute + ' pm'
             divGreeting.textContent='Good evening, '+ answer + '.'
             body.classList.add('evening-body')
           }
@@ -156,17 +154,17 @@ const hideClock = () => {
 }
 
 timeSwitch.addEventListener('click', () => {
-    if (timeSwitch.checked && hour > 12) {
-        let newhr = hour-12
-        if (newhr < 12) {
-        divTime.textContent = '0' + newhr + ':' + minute + ' pm';
-        }
-        else divTime.textContent = newhr + ':' + minute + ' pm'
+    if (timeSwitch.checked) {
+        options = {hour: '2-digit', minute: '2-digit', hour12: false};
+        var time = today.toLocaleString('en-US', options);
+        divTime.textContent = time;
     }
-    else if (hour > 12) {
-        divTime.textContent = hour + ':' + minute + ' pm'
-    }
+    else options = {hour: '2-digit', minute: '2-digit', hour12: true};
+    var time = today.toLocaleString('en-US', options);
+    divTime.textContent = time;
 })
+
+
 
 newField.addEventListener('keypress', function(e) {
     if (e.key === 'Enter' && newField.value != 0) {
@@ -189,6 +187,22 @@ newField.addEventListener('keypress', function(e) {
         removeBtn.style.marginBottom = '17px'
     }
 
+})
+
+const showBtn = () => {
+    removeBtn.style.display = 'block'
+}
+
+const hideBtn = () => {
+    removeBtn.style.display = 'none'
+}
+
+focusBox.addEventListener('mouseover', ()=> {
+    showBtn();
+})
+
+focusBox.addEventListener('mouseout', ()=> {
+    hideBtn();
 })
 
 removeBtn.addEventListener('click', function remove(){
@@ -286,13 +300,6 @@ todoField.addEventListener('keypress', function (b) {
     }
 })
 
-const showBtn = () => {
-    removeBtn.style.display = 'block'
-}
-
-const hideBtn = () => {
-    removeBtn.style.display = 'none'
-}
 
 quoteBtn.addEventListener('change', () => {
 
@@ -324,6 +331,8 @@ refreshBtn.addEventListener('click', () => {
     }
     quote.textContent = quotes[i];
 })
+
+
 
 
 
