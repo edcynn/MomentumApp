@@ -119,24 +119,28 @@ answerField.addEventListener('keypress', function (a) {
         quoteBtn.style.display = 'none'
         refreshBtn.style.visibility = 'visible'
 
-        divTime.textContent = time;
+        
 
         if (options.hour < 12) {
             if (options.hour <10) {
             divGreeting.textContent= 'Good morning, '+ answer + '.'
+            divTime.textContent = time;
             }
             else 
             divGreeting.textContent= 'Good morning, '+ answer + '.'
             body.classList.add('morning-body')
+            divTime.textContent = time;
 
           } else if (options.hour > 11 && options.hour < 18) {
           
             divGreeting.textContent='Good afternoon, '+ answer + '.'
             body.classList.add('afternoon-body')
+            divTime.textContent = time;
             
           } else {
             divGreeting.textContent='Good evening, '+ answer + '.'
             body.classList.add('evening-body')
+            divTime.textContent = time;
           }
         divTime.style.marginTop = '180px'
         main.appendChild(newField)
